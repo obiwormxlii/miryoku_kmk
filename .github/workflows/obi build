@@ -1,0 +1,27 @@
+# Copyright 2022 Manna Harbour
+# https://github.com/manna-harbour/miryoku
+
+name: 'obi keeb'
+on:
+  - workflow_dispatch
+jobs:
+  build:
+    if: github.repository_owner == 'manna-harbour'
+    uses: ./.github/workflows/main.yml
+    with:
+      mode: '["build"]'
+      rgb: '[
+        "default",
+      ]'
+      alphas: '[
+        "qwerty",
+      ]'
+      nav: '[
+        "default",
+      ]'
+      clipboard: '[
+        "win"
+      ]'
+      layers: '[
+        "default",
+      ]'
